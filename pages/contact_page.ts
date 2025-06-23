@@ -34,30 +34,3 @@ export class ContactPage {
     await expect(this.errorMessage).toHaveText(/email must be formatted correctly/i);
   }
 }
-
-
-
-// import { Page, Locator, expect } from '@playwright/test';
-
-// export class ContactPage {
-//   readonly page: Page;
-//   readonly emailInput: Locator;
-//   readonly errorMessage: Locator;
-
-//   constructor(page: Page) {
-//     this.page = page;
-//     this.emailInput = page.locator('input[name="email"]');
-//     this.errorMessage = page.locator('.hs-error-msg');
-//   }
-
-//   async fillEmail(email: string) {
-//     await expect(this.emailInput).toBeVisible();
-//     await this.emailInput.fill(email);
-//     await this.emailInput.press('Tab');
-//   }
-
-//   async expectInvalidEmailValidation() {
-//     await expect(this.errorMessage).toBeVisible();
-//     await expect(this.errorMessage).toHaveText(/email must be formatted correctly/i);
-//   }
-// }
